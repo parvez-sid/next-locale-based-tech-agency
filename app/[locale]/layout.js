@@ -3,6 +3,8 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
+import '../styles/tailwind.css';
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
