@@ -1,18 +1,19 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
-import '../styles/tailwind.css';
+import "../styles/tailwind.css";
+import "../styles/style.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "../../theme";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const roboto = Roboto({
+  weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-roboto",
 });
 
 export const metadata = {
@@ -26,9 +27,11 @@ export default async function RootLayout({ children, params }) {
     notFound();
   }
   return (
-    <html lang={locale}>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+    <html lang={locale} className={roboto.variable}>
+      <body>
+        <ThemeProvider theme={theme}>
+          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

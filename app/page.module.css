@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -19,9 +19,9 @@
   padding: 80px;
   gap: 64px;
   font-family: var(--font-geist-sans);
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .page {
     --gray-rgb: 255, 255, 255;
     --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
@@ -30,16 +30,16 @@
     --button-primary-hover: #ccc;
     --button-secondary-hover: #1a1a1a;
   }
-}
+} */
 
-.main {
+/* .main {
   display: flex;
   flex-direction: column;
   gap: 32px;
   grid-row-start: 2;
-}
+} */
 
-.main ol {
+/* .main ol {
   font-family: var(--font-geist-mono);
   padding-left: 0;
   margin: 0;
@@ -111,10 +111,10 @@ a.secondary {
 
 .footer img {
   flex-shrink: 0;
-}
+} */
 
 /* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
+/* @media (hover: hover) and (pointer: fine) {
   a.primary:hover {
     background: var(--button-primary-hover);
     border-color: transparent;
@@ -164,10 +164,10 @@ a.secondary {
     align-items: center;
     justify-content: center;
   }
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .logo {
     filter: invert();
   }
-}
+} */
