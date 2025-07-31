@@ -3,7 +3,7 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
-import "../styles/tailwind.css";
+import '../globals.css';
 import "../styles/style.css";
 
 import { ThemeProvider } from "@mui/material/styles";
